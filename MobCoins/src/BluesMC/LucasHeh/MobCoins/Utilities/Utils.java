@@ -8,6 +8,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -19,11 +20,13 @@ public class Utils {
 	public HashMap<String, Integer> coinBalance;
 	public FileConfiguration config;
 	public String chatPrefix;
+	public MobChance mobChance;
 	
 	public Utils() {
 		coinBalance = new HashMap<String, Integer>();
 		config = Main.getInstance().getConfig();
 		chatPrefix = config.getString("chatPrefix");
+		mobChance = new MobChance();
 	}
 	
 	public ItemStack MobCoin() {
@@ -46,6 +49,10 @@ public class Utils {
 			converted.add(ChatColor.translateAlternateColorCodes('&', str));
 		}
 		return converted;
+	}
+	
+	public int getMobCoinBalance(Player player) {
+		return coinBalance.get(player.getUniqueId().toString());
 	}
 	
 }
