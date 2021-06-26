@@ -1,5 +1,9 @@
 ChatPrefix: "&b&lBl&9&Lue&1&lMC"
 
+Messages:
+  # {amount}
+  Redeemed: "&3You have successfully redeemed {amount} MobCoins"
+
 Coin:
   Item: SUNFLOWER
   Glowing: true

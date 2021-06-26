@@ -55,4 +55,9 @@ public class Utils {
 		return coinBalance.get(player.getUniqueId().toString());
 	}
 	
+	public void addMobCoinBalance(Player player, int amt) {
+		coinBalance.put(player.getUniqueId().toString(), 
+				coinBalance.get(player.getUniqueId().toString())+amt);
+	}
+	
 }

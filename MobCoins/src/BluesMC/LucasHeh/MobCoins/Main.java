@@ -7,11 +7,12 @@ import BluesMC.LucasHeh.MobCoins.Utilities.Utils;
 public class Main extends JavaPlugin {
 	
 	private static Main instance;
+	public Utils utils;
 
 	public void OnEnable() {
 		instance = this;
 		this.saveDefaultConfig();
-		Utils utils = new Utils();
+		utils = new Utils();
 	}
 	
 	public void OnDisable() {
