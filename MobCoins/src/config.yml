@@ -1,0 +1,9 @@
+ChatPrefix: "&b&lBl&9&Lue&1&lMC"
+
+Coin:
+  Item: SUNFLOWER
+  Glowing: true
+  Name: "&9&k&l| &4&lMob&c&lCoin &9&k&l|"
+  lore:
+  - '&7Earn &4Mob&cCoins &7from mobs'
+  - '&7and spend them in mobcoin shop'
