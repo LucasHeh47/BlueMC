@@ -1,8 +1,10 @@
-ChatPrefix: "&b&lBl&9&Lue&1&lMC"
+ChatPrefix: "&b&lBl&9&lue&1&lMC &0» "
 
 Messages:
   # {amount}
   Redeemed: "&3You have successfully redeemed {amount} MobCoins"
+  OtherBalance: "3{PLAYER}'s balance is &b{amount}"
+  Balance: "&3Your balance is &b{amount}"
 
 Coin:
   Item: SUNFLOWER

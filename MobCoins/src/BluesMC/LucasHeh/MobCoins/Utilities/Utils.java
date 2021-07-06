@@ -21,12 +21,14 @@ public class Utils {
 	public FileConfiguration config;
 	public String chatPrefix;
 	public MobChance mobChance;
+	public ItemDropsFromMobs mobDrops;
 	
 	public Utils() {
 		coinBalance = new HashMap<String, Integer>();
 		config = Main.getInstance().getConfig();
 		chatPrefix = config.getString("chatPrefix");
 		mobChance = new MobChance();
+		mobDrops = new ItemDropsFromMobs();
 	}
 	
 	public ItemStack MobCoin() {

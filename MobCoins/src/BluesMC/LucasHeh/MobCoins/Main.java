@@ -2,6 +2,7 @@ package BluesMC.LucasHeh.MobCoins;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+import BluesMC.LucasHeh.MobCoins.Events.MobCoinInteract;
 import BluesMC.LucasHeh.MobCoins.Utilities.Utils;
 
 public class Main extends JavaPlugin {
@@ -13,6 +14,8 @@ public class Main extends JavaPlugin {
 		instance = this;
 		this.saveDefaultConfig();
 		utils = new Utils();
+		new MobCoinsCommands(this);
+		this.getServer().getPluginManager().registerEvents(new MobCoinInteract(), this);
 	}
 	
 	public void OnDisable() {

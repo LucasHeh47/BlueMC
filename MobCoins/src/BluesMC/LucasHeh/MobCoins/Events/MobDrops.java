@@ -20,12 +20,18 @@ public class MobDrops implements Listener {
 		if(e.getEntity().getKiller() instanceof Player) {
 			float multiplier = 1.0f; // WORK ON THIS LATER
 			Random rand = new Random();
-			// Work on random result chance thing
+			int result = rand.nextInt(101);
+			result = result/(int) multiplier;
 			EntityType mobType = e.getEntityType();
 			Utils utils = Main.getInstance().utils;
 			MobChance chance = utils.mobChance;
 			
 			if(mobType == EntityType.COW) {
+				e.getDrops().clear();
+				e.getDrops().addAll(utils.mobDrops.cowDrops(e.getEntity().getKiller()));
+				if(result <= chance.Cow) {
+					e.getDrops().add(utils.MobCoin());
+				}
 				
 			}
 			

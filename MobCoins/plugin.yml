@@ -1,3 +1,7 @@
 main: BlueMC.LucasHeh.MobCoins.Main
 version: 0.0.1
 name: MobCoins
+
+commands:
+  MobCoins:
+    description: "command"
